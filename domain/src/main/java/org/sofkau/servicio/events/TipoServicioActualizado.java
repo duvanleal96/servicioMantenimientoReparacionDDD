@@ -2,7 +2,7 @@ package org.sofkau.servicio.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
 import org.sofkau.servicio.values.OrdenServicioId;
-import org.sofkau.servicio.TipoServicio;
+import org.sofkau.servicio.values.TipoServicio;
 
 public class TipoServicioActualizado extends DomainEvent {
     private final TipoServicio tipoServicio;

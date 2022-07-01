@@ -4,12 +4,10 @@ import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
 import org.sofkau.prestadorServicio.PrestadorServicioId;
 import org.sofkau.servicio.events.CorreoDeUnClienteActualizado;
+import org.sofkau.servicio.events.DescripcionOrdenServicioActualizado;
 import org.sofkau.servicio.events.ServicioCreado;
 import org.sofkau.servicio.events.TipoServicioActualizado;
-import org.sofkau.servicio.values.ClienteId;
-import org.sofkau.servicio.values.Correo;
-import org.sofkau.servicio.values.OrdenServicioId;
-import org.sofkau.servicio.values.ServicioId;
+import org.sofkau.servicio.values.*;
 
 import java.util.List;
 
@@ -18,6 +16,7 @@ public class Servicio extends AggregateEvent<ServicioId> {
     protected Cliente cliente;
     protected TipoServicio tipoServicio;
     protected Correo correo;
+    protected Descripcion descripcion;
 
     public Servicio(ServicioId servicioId, Cliente cliente, PrestadorServicioId prestadorServicioId) {
         super(servicioId);
@@ -39,6 +38,10 @@ public class Servicio extends AggregateEvent<ServicioId> {
     public void actualizarCorreoDeUnCliente(Correo correo, ClienteId clienteId){
         appendChange(new CorreoDeUnClienteActualizado(correo,clienteId));
     }
+    public void actualizarDescripcionDeUnaOrdenServicio(Descripcion descripcion,OrdenServicioId ordenServicioId){
+        appendChange(new DescripcionOrdenServicioActualizado(descripcion,ordenServicioId));
+    }
+
 
     public Cliente cliente() {
         return cliente;
@@ -54,5 +57,9 @@ public class Servicio extends AggregateEvent<ServicioId> {
 
     public Correo correo() {
         return correo;
+    }
+
+    public Descripcion descripcion() {
+        return descripcion;
     }
 }

@@ -1,9 +1,7 @@
 package org.sofkau.servicio;
 
 import co.com.sofka.domain.generic.Entity;
-import org.sofkau.servicio.values.Descripcion;
-import org.sofkau.servicio.values.Fecha;
-import org.sofkau.servicio.values.OrdenServicioId;
+import org.sofkau.servicio.values.*;
 
 public class OrdenServicio extends Entity<OrdenServicioId> {
     protected Fecha fecha;
@@ -32,6 +30,7 @@ public class OrdenServicio extends Entity<OrdenServicioId> {
         this.tipoServicio = tipoServicio.actualizarTipoServicio(tipoServicio);
     }
     public void actualizarDescripcion(Descripcion descripcion){
-        this.descripcion.actualizarDescripcion(descripcion);
+        this.descripcion=descripcion.actualizarDescripcion(descripcion);
     }
+
 }

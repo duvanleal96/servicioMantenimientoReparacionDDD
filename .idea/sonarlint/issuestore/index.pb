@@ -33,15 +33,7 @@ u
 Edomain/src/main/java/org/sofkau/prestadorServicio/values/CargoId.java,a\0\a0f6636345132a9d94021b99f3d12da465d2d774
 |
 Ldomain/src/main/java/org/sofkau/prestadorServicio/values/Disponibilidad.java,b\5\b539fc2906c6e532b89d9fccefc0a3fa9ca076e6
-e
-5domain/src/main/java/org/sofkau/servicio/Cliente.java,b\f\bfc5e8673fec1cd258063a61cf3be6abf7c75e42
 n
 >domain/src/main/java/org/sofkau/servicio/values/ClienteId.java,5\5\55b666378663085dacf88270b6d91a273f8741fb
-k
-;domain/src/main/java/org/sofkau/servicio/values/Correo.java,f\1\f16e62bec59a2cc7dbd7d695ac4fb813fef4b690
-p
-@domain/src/main/java/org/sofkau/servicio/values/Descripcion.java,d\6\d6bbd525732ba0faf7ea8ee4a9462d26263a11a4
 n
 >domain/src/main/java/org/sofkau/servicio/values/Direccion.java,c\c\cc731f55a8206fdea641322d86a54361eca7c1d1
-n
->domain/src/main/java/org/sofkau/servicio/values/Documento.java,e\5\e5bbc4dae95c776254098de75e930e4cefd98ff2
