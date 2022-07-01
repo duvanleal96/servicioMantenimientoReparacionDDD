@@ -6,6 +6,7 @@ import org.sofkau.prestadorServicio.events.*;
 import org.sofkau.prestadorServicio.values.*;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
 
@@ -41,6 +42,8 @@ public class PrestadorServicio extends AggregateEvent<PrestadorServicioId> {
     }
 
     public void actualizarComentarioDeUnaCalificacion(Comentario comentario, CalificacionId calificacionId){
+        Objects.requireNonNull(comentario);
+        Objects.requireNonNull(calificacionId);
         appendChange(new ComentarioDeUnaCalificacionActualizada(comentario,calificacionId)).apply();
     }
     public void actualizarPuntajeDeUnaCalificacion(Puntaje puntaje, CalificacionId calificacionId){

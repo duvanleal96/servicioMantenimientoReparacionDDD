@@ -1,0 +1,6 @@
+
+*
+java:S1700	"Rename field "fecha"(®¤Âı
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ªíòóøÿÿÿÿ
+?
+java:S1068	")Remove this unused "fecha" private field.(®¤Âı
