@@ -1,4 +1,4 @@
-package org.sofkau.prestadorServicio;
+package org.sofkau.prestadorServicio.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
 import org.sofkau.prestadorServicio.values.CalificacionId;
@@ -12,5 +12,13 @@ public class PuntajeDeUnaCalificacionActualizada extends DomainEvent {
         super("org.sofkau.PuntajeDeUnaCalificacionActualizada");
         this.puntaje = puntaje;
         this.calificacionId = calificacionId;
+    }
+
+    public CalificacionId calificacionId() {
+        return calificacionId;
+    }
+
+    public Puntaje puntaje() {
+        return puntaje;
     }
 }

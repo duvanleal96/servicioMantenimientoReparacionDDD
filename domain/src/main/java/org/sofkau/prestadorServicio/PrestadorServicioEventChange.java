@@ -1,10 +1,8 @@
 package org.sofkau.prestadorServicio;
 
 import co.com.sofka.domain.generic.EventChange;
-import org.sofkau.prestadorServicio.events.CalificacionAgregada;
-import org.sofkau.prestadorServicio.events.ComentarioDeUnaCalificacionActualizada;
-import org.sofkau.prestadorServicio.events.HorarioAgregado;
-import org.sofkau.prestadorServicio.events.PrestadorDeServiciosCreado;
+import org.sofkau.prestadorServicio.events.*;
+import org.sofkau.prestadorServicio.values.Nombre;
 
 import java.util.HashSet;
 
@@ -25,6 +23,16 @@ public class PrestadorServicioEventChange extends EventChange {
             Calificacion calificacion = prestadorServicio.getCalificacionPorID(event.calificacionId())
                     .orElseThrow(()->new IllegalArgumentException("calificacion no encontrada"));
             calificacion.actualizarComentario(event.comentario());
+        });
+        apply((PuntajeDeUnaCalificacionActualizada event)->{
+            Calificacion calificacion = prestadorServicio.getCalificacionPorID(event.calificacionId())
+                    .orElseThrow(()->new IllegalArgumentException("calificacion no encontrada"));
+            calificacion.actualizarPuntaje(event.puntaje());
+        });
+        apply((DisponibilidadDeUnHorarioActualizada event)->{
+            Horario horario = prestadorServicio.getHorarioPorID(event.horarioId())
+                    .orElseThrow(()->new IllegalArgumentException("Horario no encontrado"));
+            horario.actualizarDisponibilidad(event.disponibilidad());
         });
     }
 
