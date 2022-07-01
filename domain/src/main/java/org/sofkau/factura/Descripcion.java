@@ -1,4 +1,4 @@
-package org.sofkau.servicio;
+package org.sofkau.factura;
 
 public class Descripcion {
 }

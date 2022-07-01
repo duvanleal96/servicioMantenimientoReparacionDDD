@@ -1,4 +1,10 @@
 package org.sofkau.servicio;
 
-public class Cliente {
+import co.com.sofka.domain.generic.Entity;
+import org.sofkau.servicio.values.ClienteId;
+
+public class Cliente extends Entity<ClienteId> {
+    public Cliente(ClienteId clienteId) {
+        super(clienteId);
+    }
 }

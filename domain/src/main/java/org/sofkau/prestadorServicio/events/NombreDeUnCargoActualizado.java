@@ -1,4 +1,4 @@
-package org.sofkau.prestadorServicio;
+package org.sofkau.prestadorServicio.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
 import org.sofkau.prestadorServicio.values.CargoId;
