@@ -2,7 +2,7 @@ package org.sofkau.servicio;
 
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
-import org.sofkau.prestadorServicio.PrestadorServicioId;
+import org.sofkau.prestadorServicio.values.PrestadorServicioId;
 import org.sofkau.servicio.events.CorreoDeUnClienteActualizado;
 import org.sofkau.servicio.events.DescripcionOrdenServicioActualizado;
 import org.sofkau.servicio.events.ServicioCreado;

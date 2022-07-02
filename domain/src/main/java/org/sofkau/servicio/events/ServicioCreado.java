@@ -1,7 +1,7 @@
 package org.sofkau.servicio.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import org.sofkau.prestadorServicio.PrestadorServicioId;
+import org.sofkau.prestadorServicio.values.PrestadorServicioId;
 import org.sofkau.servicio.Cliente;
 import org.sofkau.servicio.values.ServicioId;
 

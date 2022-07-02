@@ -2,7 +2,7 @@ package org.sofkau.prestadorServicio.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
 import org.sofkau.prestadorServicio.Cargo;
-import org.sofkau.prestadorServicio.PrestadorServicioId;
+import org.sofkau.prestadorServicio.values.PrestadorServicioId;
 
 public class PrestadorDeServiciosCreado extends DomainEvent {
     private final PrestadorServicioId prestadorServicioId;

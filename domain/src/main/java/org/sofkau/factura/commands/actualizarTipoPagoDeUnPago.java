@@ -1,9 +1,9 @@
 package org.sofkau.factura.commands;
 
 import co.com.sofka.domain.generic.Command;
-import org.sofkau.factura.FacturaId;
-import org.sofkau.factura.PagoId;
-import org.sofkau.factura.TipoPago;
+import org.sofkau.factura.values.FacturaId;
+import org.sofkau.factura.values.PagoId;
+import org.sofkau.factura.values.TipoPago;
 
 public class actualizarTipoPagoDeUnPago extends Command {
     private final FacturaId facturaId;

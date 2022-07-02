@@ -1,7 +1,7 @@
 package org.sofkau.prestadorServicio.commands;
 
 import co.com.sofka.domain.generic.Command;
-import org.sofkau.prestadorServicio.PrestadorServicioId;
+import org.sofkau.prestadorServicio.values.PrestadorServicioId;
 import org.sofkau.prestadorServicio.values.CalificacionId;
 import org.sofkau.prestadorServicio.values.Puntaje;
 

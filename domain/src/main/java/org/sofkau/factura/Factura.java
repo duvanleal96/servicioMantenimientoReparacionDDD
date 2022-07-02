@@ -2,13 +2,16 @@ package org.sofkau.factura;
 
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
+import org.sofkau.factura.events.DescripcionDeUnaFacturaActualizada;
 import org.sofkau.factura.events.FacturaCreada;
 import org.sofkau.factura.events.TipoPagoActualizado;
 import org.sofkau.factura.events.ValorDeUnPagoActualizado;
-import org.sofkau.prestadorServicio.PrestadorServicio;
-import org.sofkau.prestadorServicio.PrestadorServicioEventChange;
-import org.sofkau.prestadorServicio.PrestadorServicioId;
-import org.sofkau.servicio.values.Fecha;
+import org.sofkau.factura.values.FacturaId;
+import org.sofkau.factura.values.PagoId;
+import org.sofkau.factura.values.TipoPago;
+import org.sofkau.factura.values.Valor;
+import org.sofkau.factura.values.Fecha;
+import org.sofkau.factura.values.Descripcion;
 import org.sofkau.servicio.values.ServicioId;
 
 import java.util.List;
@@ -21,9 +24,10 @@ public class Factura extends AggregateEvent<FacturaId> {
     protected Fecha fecha;
     protected Valor valor;
     protected TipoPago tipoPago;
-    public Factura(FacturaId facturaId, ServicioId servicioId, Fecha fecha) {
+    protected Descripcion descripcion;
+    public Factura(FacturaId facturaId, ServicioId servicioId, Fecha fecha, Descripcion descripcion) {
         super(facturaId);
-        appendChange(new FacturaCreada(facturaId,servicioId,fecha)).apply();
+        appendChange(new FacturaCreada(facturaId,servicioId,fecha,descripcion)).apply();
         subscribe(new FacturaEventChange(this));
     }
     private Factura(FacturaId facturaId){
@@ -35,7 +39,7 @@ public class Factura extends AggregateEvent<FacturaId> {
         events.forEach(factura::applyEvent);
         return factura;
     }
-    public void actualizarTipoPagoDeUnPago(PagoId pagoid,TipoPago tipoPago){
+    public void actualizarTipoPagoDeUnPago(PagoId pagoid, TipoPago tipoPago){
         Objects.requireNonNull(pagoid);
         Objects.requireNonNull(tipoPago);
         appendChange(new TipoPagoActualizado(pagoid,tipoPago)).apply();
@@ -43,7 +47,12 @@ public class Factura extends AggregateEvent<FacturaId> {
     public void actualizarValorDeUnPago(PagoId pagoId,Valor valor){
         Objects.requireNonNull(pagoId);
         Objects.requireNonNull(valor);
-        appendChange(new ValorDeUnPagoActualizado(pagoId,valor));
+        appendChange(new ValorDeUnPagoActualizado(pagoId,valor)).apply();
+    }
+    public void actualizarDescripcionDeUnaFactura(FacturaId factura,Descripcion descripcion){
+        Objects.requireNonNull(factura);
+        Objects.requireNonNull(descripcion);
+        appendChange(new DescripcionDeUnaFacturaActualizada(factura,descripcion)).apply();
     }
 
     public Garantia garantia() {

@@ -1,8 +1,8 @@
 package org.sofkau.factura.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import org.sofkau.factura.PagoId;
-import org.sofkau.factura.Valor;
+import org.sofkau.factura.values.PagoId;
+import org.sofkau.factura.values.Valor;
 
 public class ValorDeUnPagoActualizado extends DomainEvent {
     private final PagoId pagoId;

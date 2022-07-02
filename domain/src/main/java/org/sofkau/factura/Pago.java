@@ -1,6 +1,9 @@
 package org.sofkau.factura;
 
 import co.com.sofka.domain.generic.Entity;
+import org.sofkau.factura.values.PagoId;
+import org.sofkau.factura.values.TipoPago;
+import org.sofkau.factura.values.Valor;
 
 public class Pago extends Entity<PagoId> {
     protected Valor valor;

@@ -1,6 +1,9 @@
 package org.sofkau.factura;
 
 import co.com.sofka.domain.generic.Entity;
+import org.sofkau.factura.values.Descripcion;
+import org.sofkau.factura.values.Duracion;
+import org.sofkau.factura.values.GarantiaId;
 
 public class Garantia extends Entity<GarantiaId> {
     protected Duracion duracion;
