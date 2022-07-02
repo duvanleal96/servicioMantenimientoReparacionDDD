@@ -3,16 +3,16 @@ package org.sofkau.prestadorServicio.commands;
 import co.com.sofka.domain.generic.Command;
 import org.sofkau.prestadorServicio.values.PrestadorServicioId;
 import org.sofkau.prestadorServicio.values.CalificacionId;
-import org.sofkau.prestadorServicio.values.Comentario;
+import org.sofkau.prestadorServicio.values.Puntaje;
 
-public class actualizarComentarioDeUnaCalificacion extends Command {
+public class ActualizarPuntajeDeUnaCalificacion extends Command {
     private final PrestadorServicioId prestadorServicioId;
-    private final Comentario comentario;
+    private final Puntaje puntaje;
     private final CalificacionId calificacionId;
 
-    public actualizarComentarioDeUnaCalificacion(PrestadorServicioId prestadorServicioId,Comentario comentario, CalificacionId calificacionId){
+    public ActualizarPuntajeDeUnaCalificacion(PrestadorServicioId prestadorServicioId, Puntaje puntaje, CalificacionId calificacionId) {
         this.prestadorServicioId = prestadorServicioId;
-        this.comentario = comentario;
+        this.puntaje = puntaje;
         this.calificacionId = calificacionId;
     }
 
@@ -20,8 +20,8 @@ public class actualizarComentarioDeUnaCalificacion extends Command {
         return calificacionId;
     }
 
-    public Comentario comentario() {
-        return comentario;
+    public Puntaje puntaje() {
+        return puntaje;
     }
 
     public PrestadorServicioId prestadorServicioId() {

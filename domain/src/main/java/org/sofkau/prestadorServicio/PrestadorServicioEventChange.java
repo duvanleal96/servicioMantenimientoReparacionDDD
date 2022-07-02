@@ -9,7 +9,7 @@ import java.util.HashSet;
 public class PrestadorServicioEventChange extends EventChange {
     public PrestadorServicioEventChange(PrestadorServicio prestadorServicio) {
         apply((PrestadorDeServiciosCreado event)->{
-            prestadorServicio.cargo=event.Cargo();
+            prestadorServicio.cargoId=event.CargoId();
             prestadorServicio.calificaciones=new HashSet<>();
             prestadorServicio.horarios=new HashSet<>();
         });

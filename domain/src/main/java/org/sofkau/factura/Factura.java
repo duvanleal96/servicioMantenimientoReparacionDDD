@@ -3,15 +3,10 @@ package org.sofkau.factura;
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
 import org.sofkau.factura.events.DescripcionDeUnaFacturaActualizada;
-import org.sofkau.factura.events.FacturaCreada;
 import org.sofkau.factura.events.TipoPagoActualizado;
 import org.sofkau.factura.events.ValorDeUnPagoActualizado;
-import org.sofkau.factura.values.FacturaId;
-import org.sofkau.factura.values.PagoId;
-import org.sofkau.factura.values.TipoPago;
-import org.sofkau.factura.values.Valor;
-import org.sofkau.factura.values.Fecha;
-import org.sofkau.factura.values.Descripcion;
+import org.sofkau.factura.events.FacturaCreada;
+import org.sofkau.factura.values.*;
 import org.sofkau.servicio.values.ServicioId;
 
 import java.util.List;

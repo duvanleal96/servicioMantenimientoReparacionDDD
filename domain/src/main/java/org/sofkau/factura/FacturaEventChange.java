@@ -2,9 +2,9 @@ package org.sofkau.factura;
 
 import co.com.sofka.domain.generic.EventChange;
 import org.sofkau.factura.events.DescripcionDeUnaFacturaActualizada;
-import org.sofkau.factura.events.FacturaCreada;
 import org.sofkau.factura.events.TipoPagoActualizado;
 import org.sofkau.factura.events.ValorDeUnPagoActualizado;
+import org.sofkau.factura.events.FacturaCreada;
 
 public class FacturaEventChange extends EventChange {
     public FacturaEventChange(Factura factura) {

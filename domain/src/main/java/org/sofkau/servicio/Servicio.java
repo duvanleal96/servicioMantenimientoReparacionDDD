@@ -13,14 +13,14 @@ import java.util.List;
 
 public class Servicio extends AggregateEvent<ServicioId> {
     protected OrdenServicio ordenServicio;
-    protected Cliente cliente;
+    protected ClienteId clienteId;
     protected TipoServicio tipoServicio;
     protected Correo correo;
     protected Descripcion descripcion;
 
-    public Servicio(ServicioId servicioId, Cliente cliente, PrestadorServicioId prestadorServicioId) {
+    public Servicio(ServicioId servicioId, ClienteId clienteId, PrestadorServicioId prestadorServicioId) {
         super(servicioId);
-        appendChange(new ServicioCreado(servicioId,cliente,prestadorServicioId)).apply();
+        appendChange(new ServicioCreado(servicioId,clienteId,prestadorServicioId)).apply();
         subscribe(new ServicioEventChange(this));
     }
     private Servicio(ServicioId servicioId){
@@ -43,8 +43,8 @@ public class Servicio extends AggregateEvent<ServicioId> {
     }
 
 
-    public Cliente cliente() {
-        return cliente;
+    public ClienteId clienteId() {
+        return clienteId;
     }
 
     public OrdenServicio ordenServicio() {

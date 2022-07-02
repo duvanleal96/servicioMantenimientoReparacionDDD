@@ -13,6 +13,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.sofkau.factura.commands.ActualizarDescripcionDeUnaFactura;
 import org.sofkau.factura.events.DescripcionDeUnaFacturaActualizada;
 import org.sofkau.factura.events.FacturaCreada;
+import org.sofkau.factura.ActualizarDescripcionDeFacturaUseCase;
 import org.sofkau.factura.values.Descripcion;
 import org.sofkau.factura.values.FacturaId;
 import org.sofkau.factura.values.Fecha;

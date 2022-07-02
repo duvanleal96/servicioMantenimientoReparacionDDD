@@ -5,12 +5,12 @@ import org.sofkau.prestadorServicio.values.PrestadorServicioId;
 import org.sofkau.prestadorServicio.values.CargoId;
 import org.sofkau.prestadorServicio.values.Nombre;
 
-public class actualizarNombreDeUnCargo extends Command {
+public class ActualizarNombreDeUnCargo extends Command {
     private final PrestadorServicioId prestadorServicioId;
     private final Nombre nombre;
     private final CargoId cargoId;
 
-    public actualizarNombreDeUnCargo(PrestadorServicioId prestadorServicioId, Nombre nombre, CargoId cargoId) {
+    public ActualizarNombreDeUnCargo(PrestadorServicioId prestadorServicioId, Nombre nombre, CargoId cargoId) {
         this.prestadorServicioId = prestadorServicioId;
         this.nombre = nombre;
         this.cargoId = cargoId;

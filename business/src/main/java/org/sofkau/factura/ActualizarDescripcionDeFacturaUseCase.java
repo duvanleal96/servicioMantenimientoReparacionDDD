@@ -4,7 +4,6 @@ import co.com.sofka.business.generic.UseCase;
 import co.com.sofka.business.support.RequestCommand;
 import co.com.sofka.business.support.ResponseEvents;
 import org.sofkau.factura.commands.ActualizarDescripcionDeUnaFactura;
-import org.sofkau.factura.commands.CrearFactura;
 
 public class ActualizarDescripcionDeFacturaUseCase extends UseCase<RequestCommand<ActualizarDescripcionDeUnaFactura>, ResponseEvents> {
     @Override

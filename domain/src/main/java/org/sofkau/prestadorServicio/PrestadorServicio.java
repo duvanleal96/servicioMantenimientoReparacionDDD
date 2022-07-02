@@ -11,7 +11,7 @@ import java.util.Optional;
 import java.util.Set;
 
 public class PrestadorServicio extends AggregateEvent<PrestadorServicioId> {
-    protected Cargo cargo;
+    protected CargoId cargoId;
     protected Set<Calificacion> calificaciones;
     protected Set<Horario> horarios;
 
@@ -20,9 +20,9 @@ public class PrestadorServicio extends AggregateEvent<PrestadorServicioId> {
     protected Disponibilidad disponibilidad;
     protected Nombre nombre;
 
-    public PrestadorServicio(PrestadorServicioId prestadorServicioId, Cargo cargo) {
+    public PrestadorServicio(PrestadorServicioId prestadorServicioId, CargoId cargoId) {
         super(prestadorServicioId);
-        appendChange(new PrestadorDeServiciosCreado(prestadorServicioId,cargo)).apply();
+        appendChange(new PrestadorDeServiciosCreado(prestadorServicioId,cargoId)).apply();
         subscribe(new PrestadorServicioEventChange(this));
     }
     private PrestadorServicio(PrestadorServicioId prestadorServicioId){
@@ -62,8 +62,8 @@ public class PrestadorServicio extends AggregateEvent<PrestadorServicioId> {
         return horarios().stream().filter(horario -> horario.identity().equals(horarioId)).findFirst();
     }
 
-    public Cargo cargo() {
-        return cargo;
+    public CargoId cargoId() {
+        return cargoId;
     }
 
     public Set<Calificacion> calificaciones() {

@@ -9,7 +9,7 @@ import org.sofkau.servicio.events.TipoServicioActualizado;
 public class ServicioEventChange extends EventChange {
     public ServicioEventChange(Servicio servicio) {
         apply((ServicioCreado event)->{
-            servicio.cliente=event.cliente();
+            servicio.clienteId=event.clienteId();
             servicio.ordenServicio=null;
         });
         apply((TipoServicioActualizado event)->{
